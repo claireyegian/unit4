@@ -9,4 +9,4 @@ def printnStars(num1):
             print(' '*t+'*'*i+'*'*i)
             i += 1
 
-printnStars(12)
+printnStars(15)
