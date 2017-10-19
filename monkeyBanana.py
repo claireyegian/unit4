@@ -11,6 +11,8 @@ CELL_SIZE = 20
 
 def moveRight(event):
     monkey.x += CELL_SIZE
+def moveDown(event):
+    monkey.y -= CELL_SIZE
 
 if __name__ == '__main__':
     
@@ -27,4 +29,5 @@ if __name__ == '__main__':
     Sprite(bananaBox,(COLS*CELL_SIZE/2,ROWS*CELL_SIZE/2))
     
     App().listenKeyEvent('keydown','right arrow',moveRight)
+    App().listenKeyEvent('keydown','down arrow',moveDown)
     App().run()
