@@ -34,7 +34,7 @@ def moveDown(event):
         if monkey.x == banana.x and monkey.y == banana.y:
             moveBanana()
 
-def moveBanana:
+def moveBanana():
     banana.x = randint(0,COLS-1)*CELL_SIZE
     banana.y = randint(0,ROWS-1)*CELL_SIZE
 
