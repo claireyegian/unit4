@@ -5,9 +5,9 @@
 from ggame import *
 
 #constants
-ROWS = 30
-COLS = 60
-CELL_SIZE = 20
+ROWS = 60
+COLS = 110
+CELL_SIZE = 10
 
 def moveRight(event):
     monkey.x += CELL_SIZE
