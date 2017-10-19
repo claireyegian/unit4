@@ -49,7 +49,7 @@ def updateScore():
 if __name__ == '__main__':
     
     data = {}
-    date['score'] = 0
+    data['score'] = 0
     
     green = Color(0x006600,1)
     brown = Color(0x8b4513,1)
@@ -58,10 +58,12 @@ if __name__ == '__main__':
     jungleBox = RectangleAsset(COLS*CELL_SIZE,ROWS*CELL_SIZE,LineStyle(1,green),green)
     monkeyBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,brown),brown)
     bananaBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,yellow),yellow)
+    scoreBox = TextAsset('Score = 0')
     
     Sprite(jungleBox)
     banana = Sprite(bananaBox,(COLS*CELL_SIZE/2,ROWS*CELL_SIZE/2))
     monkey = Sprite(monkeyBox)
+    Sprite(scoreBox,(0,ROWS*CELL_SIZE))
     
     App().listenKeyEvent('keydown','right arrow',moveRight)
     App().listenKeyEvent('keydown','left arrow',moveLeft)
