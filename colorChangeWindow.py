@@ -2,6 +2,7 @@
 #10/18/17
 #colorChangeWindow.py - window changes to random color each time you click it
 
+from ggame import *
 from random import randint
 
 def mouseClick(event):
