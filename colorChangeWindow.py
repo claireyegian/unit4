@@ -5,17 +5,26 @@
 from random import randint
 
 def mouseClick(event):
-    num1 = randint(0,9)
-    num2 = randint(0,9)
-    num3 = randint(0,9)
-    num4 = randint(0,9)
-    num5 = randint(0,9)
-    num6 = randint(0,9)
-    
-    color = Color(0xnum1num2num3num4num5num6,1)
-    
-    colorBox = RectangleAsset(1000,600,LineStyle(1,color),color)
-    Sprite(colorBox)
+    changeColor()
 
-App().listenKeyEvent('click',mouseClick)
+def changeColor():
+    num1 = randint(1,4)
+    if num1 == 1:
+        color = Color(0x00ff63,1)
+        colorBox = RectangleAsset(1000,600,LineStyle(1,color),color)
+        Sprite(colorBox)
+    elif num1 == 2:
+        color = Color(0xff4563,1)
+        colorBox = RectangleAsset(1000,600,LineStyle(1,color),color)
+        Sprite(colorBox)
+    elif num1 == 3:
+        color = Color(0x004300,1)
+        colorBox = RectangleAsset(1000,600,LineStyle(1,color),color)
+        Sprite(colorBox)
+    elif num1 == 4:
+        color = Color(0xff00ff,1)
+        colorBox = RectangleAsset(1000,600,LineStyle(1,color),color)
+        Sprite(colorBox)
+
+App().listenMouseEvent('click',mouseClick)
 App().run()
