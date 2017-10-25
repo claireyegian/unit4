@@ -2,20 +2,8 @@
 #10/18/17
 #printSquares.py - prints out grid of squares
 
-print(+--+)
-print(|  |)
-print(+--+)
-
-if i==1 and n==1:
-    print(+--+)
-    print(|  |)
-    print(+--+)
-elif i>1 and n==1:
-    print('+--+'+'--+'*(i-1))
-    print(|  |)
-    print(+--+)
-
 def printSquares(rows,columns):
+    n = 0
     while n<=columns:
         if columns == 0:
             break
@@ -29,6 +17,7 @@ def printSquares(rows,columns):
             print('|  |'+'  |'*columns-1)
             print('+--+'+'--+'*columns-1)
             n+=1
+    i = 0
     while i<=rows:
         if rows == 0:
             break
@@ -38,7 +27,9 @@ def printSquares(rows,columns):
             print('+--+')
             i+=1
         if rows > 1:
-            print('+--+'+'--+'*columns-1)
-            print('|  |'+'  |'*columns-1)
-            print('+--+'+'--+'*columns-1)
+            print('+--+'+'--+'*rows-1)
+            print('|  |'+'  |'*rows-1)
+            print('+--+'+'--+'*rows-1)
             i+=1
+
+printSquares(2,4)
