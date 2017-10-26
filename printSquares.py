@@ -4,9 +4,10 @@
 
 def printSquares(rows,columns):
     n = 0
-    while n<=columns:
-        print('+--'*rows+'+')
-        print('|  '*rows+'|')
-    n += 1
+    while n<rows:
+        print('+--'*columns+'+')
+        print('|  '*columns+'|')
+        n += 1
+    print('+--'*columns+'+')
 
-printSquares(2,4)
+printSquares(4,9)
