@@ -8,9 +8,6 @@ def GCF(num1,num2):
         if num1%i==0:
             if num2%i==0:
                 return(i)
-                break
-        elif num1%i!=0:
-            break
         i = i - 1
 
 print(GCF(10,15))
