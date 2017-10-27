@@ -19,7 +19,7 @@ def encourage():
         return('Thats 5 correct! Congrats')
 
 total = 0
-while true:
+while True:
     answer = int(input(num1,'x',num2,'='))
     if num1*num2==answer:
         total += 1
