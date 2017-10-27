@@ -10,4 +10,4 @@ def GCF(num1,num2):
                 return(i)
         i = i - 1
 
-print(GCF(10,15))
+print(GCF(2,3))
