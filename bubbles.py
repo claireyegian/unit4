@@ -5,18 +5,29 @@
 from ggame import *
 from random import randint
 
-num = randint(1,7)
-color1 = Color(0x00ff21,1)
-color2 = Color(0x00ff21,1)
-color1 = Color(0x00ff21,1)
-color1 = Color(0x00ff21,1)
-color1 = Color(0x00ff21,1)
-color1 = Color(0x00ff21,1)
-color1 = Color(0x00ff21,1)
+def mouseClick(event):
+    addBubble()
 
-bubblecolor = Color(0x004566,1)
+def addBubble():
+    num = randint(1,7)
+    if num==1:
+        bubblecolor = Color(0x00ff21,1)
+    if num==2:
+        bubblecolor = Color(0x321200,1)
+    if num==3:
+        bubblecolor = Color(0x000067,1)
+    if num==4:
+        bubblecolor = Color(0x5100ff,1)
+    if num==5:
+        bubblecolor = Color(0xf00032,1)
+    if num==6:
+        bubblecolor = Color(0x450081,1)
+    if num==7:
+        bubblecolor = Color(0x090909,1)
+    
+    bubble = CircleAsset(randint(5,200),LineStyle(1,bubblecolor),bubblecolor)
+    Sprite(bubble,(randint(1,500),randint(1,500)))
+    App().run()
 
-bubble = CircleAsset(randint(1,200),LineStyle(1,bubblecolor),bubblecolor)
-
-Sprite(bubble,(randint(1,500),randint(1,500)))
+App().listenMouseEvent('click',mouseClick)
 App().run()
