@@ -4,9 +4,6 @@
 
 from random import randint
 
-num1 = randint(1,12)
-num2 = randint(1,12)
-
 def encourage():
     num3 = randint(1,4)
     if num3==1:
@@ -16,15 +13,15 @@ def encourage():
     if num3==3:
         return('Keep up the great multiplying!')
     if num3==4:
-        return('Thats 5 correct! Congrats')
+        return('Thats 5 more correct! Congrats')
 
 total = 0
-while True:
-    answer = int(input(num1,'x',num2,'='))
+while total<=12:
+    num1 = randint(1,12)
+    num2 = randint(1,12)
+    answer = int(input(str(num1)+' x '+str(num2)+' = '))
     if num1*num2==answer:
         total += 1
-        if total == 5:
+        if total%5 == 0:
             print(encourage())
-    if answer=='break':
-        break
     
